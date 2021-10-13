@@ -1,0 +1,29 @@
+//- to format code Ctrl+Shift+P then type pug and enter
+doctype html
+html
+    head
+      block head
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(charset='UTF-8')
+        link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
+        link(rel='stylesheet' href='/css/style.css') 
+        link(rel='shortcut icon' type-'image/png' href='/img/logo.png')
+        title Natours | #{title || 'Exciting tours for adventurous people'}
+
+    body
+        // HEADER
+        include _header
+
+        //- CONTENT
+        block content
+            h1 This is a placeholder heading
+        
+        // FOOTER
+        include _footer
+
+        //- script(src='/js/mapbox.js')
+        //- script(src='/js/login.js')
+        script(src='/js/bundle.js')
+
+
+
