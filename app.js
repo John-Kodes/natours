@@ -18,6 +18,8 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
+app.enable('trust proxy');
+
 // Setting view engine
 app.set('view engine', 'pug');
 // we use the directory name variable by using the path core module. we dont use `${__dirname}/views` because we don't always know whether that we a path that we receive from somewhere already has a slash or not.
